@@ -1,0 +1,369 @@
+/* Shared look for the whole app. Change colors here to restyle later. */
+:root {
+  --green: #1b7a4a;
+  --green-dark: #145c38;
+  --green-soft: #e7f6ee;
+  --green-light: #f4fbf7;
+  --text: #1c2430;
+  --text-muted: #5b6573;
+  --white: #ffffff;
+  --page-bg: #f6f8f7;
+  --border: #e6eae8;
+  --shadow: 0 6px 18px rgba(20, 40, 30, 0.06);
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --focus-ring: #64b987;
+  --radius: 14px;
+  --header-height: 76px;
+  --sidebar-width: 260px;
+  --sans: 'Segoe UI', system-ui, Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--page-bg);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --green: #43bd7d;
+  --green-dark: #8de0ae;
+  --green-soft: #1c3829;
+  --green-light: #172820;
+  --text: #e6eee9;
+  --text-muted: #a4b2aa;
+  --page-bg: #101714;
+  --border: #2b3932;
+  --surface: #18211d;
+  --surface-raised: #202b25;
+  --focus-ring: #60cb8d;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme='dark'] body,
+html[data-theme='dark'] .shell {
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+html[data-theme='dark'] .shell-main,
+html[data-theme='dark'] .top-header,
+html[data-theme='dark'] .sidebar,
+html[data-theme='dark'] .menu-button,
+html[data-theme='dark'] .icon-button,
+html[data-theme='dark'] .notice-panel,
+html[data-theme='dark'] .theme-toggle {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .sidebar-brand strong,
+html[data-theme='dark'] .nav-item,
+html[data-theme='dark'] .nav-item.is-active,
+html[data-theme='dark'] .header-copy h1 {
+  color: var(--text);
+}
+
+html[data-theme='dark'] .nav-item:hover,
+html[data-theme='dark'] .nav-item.is-active,
+html[data-theme='dark'] .theme-toggle:hover,
+html[data-theme='dark'] .icon-button:hover {
+  background-color: var(--green-soft);
+}
+
+html[data-theme='dark'] .nav-item.is-active,
+html[data-theme='dark'] .sidebar-brand p,
+html[data-theme='dark'] .header-copy p,
+html[data-theme='dark'] .profile small,
+html[data-theme='dark'] .notice-panel {
+  color: var(--text-muted);
+}
+
+html[data-theme='dark'] .nav-item.is-active {
+  color: var(--green-dark);
+}
+
+html[data-theme='dark'] .avatar {
+  background: var(--green-soft);
+  color: var(--green-dark);
+}
+
+html[data-theme='dark'] .shell-main input,
+html[data-theme='dark'] .shell-main select,
+html[data-theme='dark'] .shell-main textarea,
+html[data-theme='dark'] .shell-main option {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .shell-main input::placeholder,
+html[data-theme='dark'] .shell-main textarea::placeholder {
+  color: #91a198;
+}
+
+html[data-theme='dark'] .calculator-input-wrap input {
+  border-color: transparent;
+  background: transparent;
+}
+
+html[data-theme='dark'] .shell-main [class*='card'],
+html[data-theme='dark'] .shell-main [class*='Card'],
+html[data-theme='dark'] .shell-main [class*='panel'],
+html[data-theme='dark'] .shell-main [class*='Panel'] {
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .shell-main [class*='card'],
+html[data-theme='dark'] .shell-main [class*='Card'],
+html[data-theme='dark'] .shell-main [class*='panel'],
+html[data-theme='dark'] .shell-main [class*='Panel'] {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+html[data-theme='dark'] .shell-main h1,
+html[data-theme='dark'] .shell-main h2,
+html[data-theme='dark'] .shell-main h3,
+html[data-theme='dark'] .shell-main h4,
+html[data-theme='dark'] .shell-main label,
+html[data-theme='dark'] .shell-main strong {
+  color: var(--text);
+}
+
+html[data-theme='dark'] .shell-main p,
+html[data-theme='dark'] .shell-main small {
+  color: var(--text-muted);
+}
+
+html[data-theme='dark'] .shell-main button:not([class*='primary']):not([class*='Primary']):not([class*='submit']):not([class*='Submit']) {
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .shell-main [class*='badge'],
+html[data-theme='dark'] .shell-main [class*='Badge'],
+html[data-theme='dark'] .shell-main [class*='tag'],
+html[data-theme='dark'] .shell-main [class*='Tag'] {
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .sidebar-backdrop {
+  background: rgba(0, 0, 0, 0.58);
+}
+
+html[data-theme='dark'] .dashboard-hero {
+  border-color: #30463a;
+  background: radial-gradient(ellipse at 100% 0%, rgba(40, 83, 57, .36), transparent 48%),
+    linear-gradient(112deg, #18231d 0%, #1a2920 58%, #203529 100%);
+}
+
+html[data-theme='dark'] .dashboard-hero h2 {
+  color: #e8f3eb;
+}
+
+html[data-theme='dark'] .dashboard-hero-copy > p,
+html[data-theme='dark'] .dashboard-hero-footnote {
+  color: #b3c2b8;
+}
+
+html[data-theme='dark'] .dashboard-platform-badge,
+html[data-theme='dark'] .dashboard-button-secondary {
+  border-color: #385342;
+  background: rgba(25, 39, 31, .9);
+  color: #a9e4bd;
+}
+
+html[data-theme='dark'] .dashboard-button-secondary:hover {
+  background: #24372b;
+}
+
+html[data-theme='dark'] .campus-map-canvas {
+  border-color: #34483a;
+  background-color: #1c3023;
+  background-image:
+    radial-gradient(ellipse at 8% 15%, rgba(120, 166, 128, .12) 0 4%, transparent 4.5%),
+    radial-gradient(ellipse at 86% 79%, rgba(120, 166, 128, .1) 0 7%, transparent 7.5%),
+    linear-gradient(145deg, transparent 48%, rgba(160, 195, 164, .09) 48.3% 49.3%, transparent 49.6%);
+}
+
+html[data-theme='dark'] .map-road {
+  background: #39483d;
+}
+
+html[data-theme='dark'] .map-road::after {
+  border-color: rgba(204, 222, 207, .48);
+}
+
+html[data-theme='dark'] .map-path {
+  background: #4a4b3c;
+}
+
+html[data-theme='dark'] .reports-print-area,
+html[data-theme='dark'] .report-kpi,
+html[data-theme='dark'] .report-recommendation,
+html[data-theme='dark'] .report-category-table th,
+html[data-theme='dark'] .report-unavailable {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+html[data-theme='dark'] .report-category-table th {
+  background: #202c25;
+}
+
+html[data-theme='dark'] .insights-data-status,
+html[data-theme='dark'] .analytics-data-badge,
+html[data-theme='dark'] .campus-live-total,
+html[data-theme='dark'] .leaderboard-filter button,
+html[data-theme='dark'] .insights-filter-group button,
+html[data-theme='dark'] .goal-actions button,
+html[data-theme='dark'] .reset-button,
+html[data-theme='dark'] .insights-no-results,
+html[data-theme='dark'] .analytics-empty-state,
+html[data-theme='dark'] .analytics-zero-note,
+html[data-theme='dark'] .leaderboard-empty,
+html[data-theme='dark'] .goal-empty-state {
+  border-color: var(--border);
+  background: var(--surface-raised);
+  color: var(--text-muted);
+}
+
+html[data-theme='dark'] .calculator-input-wrap,
+html[data-theme='dark'] .calculator-result-card,
+html[data-theme='dark'] .emission-breakdown,
+html[data-theme='dark'] .insights-filters,
+html[data-theme='dark'] .analytics-category-panel,
+html[data-theme='dark'] .analytics-summary article,
+html[data-theme='dark'] .analytics-detail-card,
+html[data-theme='dark'] .leaderboard-controls,
+html[data-theme='dark'] .leaderboard-entry,
+html[data-theme='dark'] .leaderboard-summary article,
+html[data-theme='dark'] .goals-summary article,
+html[data-theme='dark'] .goal-card {
+  background: var(--surface);
+}
+
+html[data-theme='dark'] .insights-baseline-note,
+html[data-theme='dark'] .analytics-caveat,
+html[data-theme='dark'] .leaderboard-demo-note,
+html[data-theme='dark'] .goals-demo-note,
+html[data-theme='dark'] .calculator-disclaimer,
+html[data-theme='dark'] .reports-data-note {
+  border-color: #5c4b2b;
+  background: #30291b;
+  color: #e3cf9c;
+}
+
+html[data-theme='dark'] .insights-baseline-note.is-live,
+html[data-theme='dark'] .reports-data-note.is-live {
+  border-color: #35513e;
+  background: #1b3022;
+  color: #b5d9bf;
+}
+
+html[data-theme='dark'] .breakdown-track,
+html[data-theme='dark'] .analytics-track,
+html[data-theme='dark'] .goal-progress-track,
+html[data-theme='dark'] .leaderboard-rank,
+html[data-theme='dark'] .leaderboard-department-category {
+  background-color: #303c35;
+}
+
+html[data-theme='dark'] .insight-card-footer,
+html[data-theme='dark'] .goal-card-footer,
+html[data-theme='dark'] .leaderboard-metric,
+html[data-theme='dark'] .leaderboard-reduction,
+html[data-theme='dark'] .report-section {
+  border-color: var(--border);
+}
+
+html[data-theme='dark'] .goal-form-panel,
+html[data-theme='dark'] .goal-form-close,
+html[data-theme='dark'] .goal-form-cancel {
+  border-color: var(--border);
+  background: var(--surface-raised);
+  color: var(--text);
+}
+
+html[data-theme='dark'] .goal-form-backdrop {
+  background: rgba(0, 0, 0, .68);
+}
+
+html[data-theme='dark'] .insight-section-label,
+html[data-theme='dark'] .illustrative-badge {
+  color: var(--text-muted);
+}
+
+html[data-theme='dark'] .illustrative-badge {
+  background: #28332d;
+}
+
+@media print {
+  html[data-theme='dark'] {
+    color-scheme: light;
+    --green: #1b7a4a;
+    --green-dark: #145c38;
+    --green-soft: #e7f6ee;
+    --green-light: #f4fbf7;
+    --text: #1c2430;
+    --text-muted: #5b6573;
+    --page-bg: #ffffff;
+    --border: #e6eae8;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  .shell,
+  .shell-main,
+  .top-header,
+  .sidebar,
+  .nav-item,
+  .theme-toggle {
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+  }
+}
